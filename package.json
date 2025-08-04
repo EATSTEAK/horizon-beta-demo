@@ -1,0 +1,23 @@
+{
+  "name": "horizon-beta-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Monorepo for 2d-game and apple-game",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.13.1",
+  "workspaces": [
+    "2d-game",
+    "apple-game"
+  ],
+  "scripts": {
+    "dev:2d": "pnpm --filter 2d-game dev",
+    "dev:apple": "pnpm --filter apple-game dev",
+    "dev": "echo \"Use 'pnpm dev:2d' or 'pnpm dev:apple'\"",
+    "build": "pnpm -r build",
+    "preview:2d": "pnpm --filter 2d-game preview",
+    "preview:apple": "pnpm --filter apple-game preview",
+    "clean": "pnpm -r exec rimraf dist .turbo || true"
+  }
+}
