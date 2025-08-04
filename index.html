@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Neon Depths</title>
+    <style>
+      html,
+      body,
+      #app {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        background: #05070a;
+        overflow: hidden;
+        color: #c8f6ff;
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+          Helvetica, Arial, Apple Color Emoji, Segoe UI Emoji;
+      }
+      .hud {
+        position: fixed;
+        top: 12px;
+        left: 12px;
+        right: 12px;
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        pointer-events: none;
+        mix-blend-mode: screen;
+        text-shadow: 0 0 8px #00e5ff;
+      }
+      .bar {
+        flex: 1;
+        height: 10px;
+        border: 1px solid #0ff3;
+        background: linear-gradient(90deg, #00e5ff44, #ff00ff44);
+        border-radius: 6px;
+        overflow: hidden;
+      }
+      .bar > i {
+        display: block;
+        height: 100%;
+        width: 40%;
+        background: linear-gradient(90deg, #00e5ff, #8a2be2);
+        box-shadow: 0 0 12px #00e5ff;
+      }
+      .timer {
+        min-width: 72px;
+        text-align: right;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <div class="hud">
+      <div class="bar"><i id="xpFill" style="width: 0%"></i></div>
+      <div class="timer" id="timer">00:00</div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
